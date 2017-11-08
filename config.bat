@@ -1,12 +1,8 @@
-set TEST_LEVEL=1
-if errorlevel 1 exit 1
 conda config --set always_yes yes
 if errorlevel 1 exit 1
-conda config --add channels r
+conda config --add channels openalea
 if errorlevel 1 exit 1
-conda config --add channels statiskit
-if errorlevel 1 exit 1
-if not "%ANACONDA_UPLOAD%" == "statiskit" (
+if not "%ANACONDA_UPLOAD%" == "openalea" (
     conda config --add channels %ANACONDA_UPLOAD%
     if errorlevel 1 exit 1
     if not "%ANACONDA_LABEL%" == "main" (
@@ -15,7 +11,7 @@ if not "%ANACONDA_UPLOAD%" == "statiskit" (
     )
 ) else (
     if not "%ANACONDA_LABEL%" == "main" (
-      conda config --add channels statiskit/label/%ANACONDA_LABEL%
+      conda config --add channels openalea/label/%ANACONDA_LABEL%
       if errorlevel 1 exit 1
     )
 )
