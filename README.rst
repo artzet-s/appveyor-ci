@@ -14,7 +14,7 @@ This collection of scripts for **AppVeyor CI** can be used with the following :c
         # Add here environement variables to control the Travis CI build
 
     install:
-      - git clone https://github.com/StatisKit/appveyor-ci.git appveyor-ci
+      - git clone https://github.com/OpenAlea/appveyor-ci.git appveyor-ci
       - cd appveyor-ci
       - call install.bat
 
